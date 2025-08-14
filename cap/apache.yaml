@@ -1,0 +1,8 @@
+---
+ - name: install apache
+   hosts: dbservers
+   tasks:
+     - command: apt update
+     - apt:
+        name: apache2
+        state: present
